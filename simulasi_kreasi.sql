@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2019 at 07:59 AM
+-- Generation Time: Mar 05, 2019 at 04:57 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -151,6 +151,38 @@ INSERT INTO `fleksi_sekali` (`id_fleksi`, `min_fs`, `max_fs`, `sm_fs`, `tenor_fs
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `multiguna`
+--
+
+CREATE TABLE `multiguna` (
+  `id_multi` int(11) NOT NULL,
+  `min_multi` int(11) NOT NULL,
+  `max_multi` int(11) NOT NULL,
+  `sm_multi` float NOT NULL,
+  `id_admin` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `multiguna`
+--
+
+INSERT INTO `multiguna` (`id_multi`, `min_multi`, `max_multi`, `sm_multi`, `id_admin`) VALUES
+(1, 1000000, 10000000, 1.5, 4),
+(2, 1000000, 10000000, 1.5, 5),
+(3, 1000000, 10000000, 1.5, 6),
+(4, 1000000, 10000000, 1.5, 8),
+(5, 10000001, 50000000, 1.25, 4),
+(6, 10000001, 50000000, 1.25, 5),
+(7, 10000001, 50000000, 1.25, 6),
+(8, 10000001, 50000000, 1.25, 8),
+(9, 50000001, 100000000, 1.15, 4),
+(10, 50000001, 100000000, 1.15, 5),
+(11, 50000001, 100000000, 1.15, 6),
+(12, 50000001, 100000000, 1.15, 8);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `reguler`
 --
 
@@ -210,6 +242,13 @@ ALTER TABLE `fleksi_sekali`
   ADD KEY `id_admin` (`id_admin`);
 
 --
+-- Indexes for table `multiguna`
+--
+ALTER TABLE `multiguna`
+  ADD PRIMARY KEY (`id_multi`),
+  ADD KEY `id_admin` (`id_admin`);
+
+--
 -- Indexes for table `reguler`
 --
 ALTER TABLE `reguler`
@@ -236,6 +275,11 @@ ALTER TABLE `fleksi_berjangka`
 ALTER TABLE `fleksi_sekali`
   MODIFY `id_fleksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
+-- AUTO_INCREMENT for table `multiguna`
+--
+ALTER TABLE `multiguna`
+  MODIFY `id_multi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
 -- AUTO_INCREMENT for table `reguler`
 --
 ALTER TABLE `reguler`
@@ -255,6 +299,12 @@ ALTER TABLE `fleksi_berjangka`
 --
 ALTER TABLE `fleksi_sekali`
   ADD CONSTRAINT `fleksi_sekali_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `administrasi` (`id_admin`);
+
+--
+-- Constraints for table `multiguna`
+--
+ALTER TABLE `multiguna`
+  ADD CONSTRAINT `multiguna_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `administrasi` (`id_admin`);
 
 --
 -- Constraints for table `reguler`
