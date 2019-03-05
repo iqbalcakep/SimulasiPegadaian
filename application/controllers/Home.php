@@ -7,7 +7,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('partial/header');
-		$this->load->view('login');
+		$this->load->view('home');
 		$this->load->view('partial/footer');	
 	}
 
@@ -17,6 +17,14 @@ class Home extends CI_Controller {
 		$this->load->view('login');
 		$this->load->view('partial/footer');	
 	}
+
+	public function reg()
+	{
+		$this->load->view('partial/header');
+		$this->load->view('reguler');
+		$this->load->view('partial/footer');	
+	}
+	
 
 	
 }
