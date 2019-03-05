@@ -1825,7 +1825,7 @@ textarea:focus {
 	border-bottom: 1px solid #eee;
 	padding: 10px 0;
 	-webkit-transition: all 1s;
-	-webkit-transition-delay: 0s;
+	/* -webkit-transition-delay: 0s; */
 	-moz-transition: all 1s;
 	-o-transition: all 1s;
 	transition: all 1s false false
@@ -1838,7 +1838,7 @@ textarea:focus {
 .category-widget ul li h6 {
 	font-weight: 300;
 	-webkit-transition: all 1s;
-	-webkit-transition-delay: 0s;
+	/* -webkit-transition-delay: 0s; */
 	-moz-transition: all 1s;
 	-o-transition: all 1s;
 	transition: all 1s false false
@@ -1846,7 +1846,7 @@ textarea:focus {
 
 .category-widget ul li span {
 	-webkit-transition: all 1s;
-	-webkit-transition-delay: 0s;
+	/* -webkit-transition-delay: 0s; */
 	-moz-transition: all 1s;
 	-o-transition: all 1s;
 	transition: all 1s false false
@@ -1868,7 +1868,7 @@ textarea:focus {
 	padding: 2px 7px;
 	margin-bottom: 8px;
 	-webkit-transition: all 1s;
-	-webkit-transition-delay: 0s;
+	/* -webkit-transition-delay: 0s; */
 	-moz-transition: all 1s;
 	-o-transition: all 1s;
 	transition: all 1s false false
@@ -1894,7 +1894,7 @@ textarea:focus {
 	line-height: 1.5em !important;
 	font-size: 14px;
 	-webkit-transition: all 1s;
-	-webkit-transition-delay: 0s;
+	/* -webkit-transition-delay: 0s; */
 	-moz-transition: all 1s;
 	-o-transition: all 1s;
 	transition: all 1s false false
@@ -1983,7 +1983,7 @@ textarea:focus {
 	padding: 8px 30px;
 	display: block;
 	-webkit-transition: all 1s;
-	-webkit-transition-delay: 0s;
+	/* -webkit-transition-delay: 0s; */
 	-moz-transition: all 1s;
 	-o-transition: all 1s;
 	transition: all 1s false false
@@ -3433,7 +3433,7 @@ h6 {
 }
 
 .form-select .nice-select {
-	border: none;
+	border: none; 
 	border-radius: 0px;
 	height: 40px;
 	background: #f9f9ff !important;
