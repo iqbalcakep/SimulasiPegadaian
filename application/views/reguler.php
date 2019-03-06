@@ -69,7 +69,7 @@
                                         </select>
                                     </div>
                                 </div>
-                            </li>
+                            </li> 
                         </ul>
 
                         <h2>Rp. 1.0000.0000,- / bulan</h2>

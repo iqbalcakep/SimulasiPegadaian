@@ -14,4 +14,13 @@ class Reguler extends CI_Controller {
 
     }
 
+    function detail(){
+        $this->load->view('partial/header');
+        $this->load->view('detailReguler');
+        $this->load->view('partial/footer');
+
+    }
+
+    
+
 }

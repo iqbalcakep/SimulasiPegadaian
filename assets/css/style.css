@@ -1187,6 +1187,12 @@ textarea:focus {
     background-image: -ms-linear-gradient(90deg,  #ffffff,#ece9e6 );
 }
 
+.bgr{
+	background-image: -moz-linear-gradient(90deg,  #ffffff,#ece9e6 );
+    background-image: -webkit-linear-gradient(90deg,  #ffffff,#ece9e6 );
+    background-image: -ms-linear-gradient(90deg,  #ffffff,#ece9e6 );
+}
+
 .footer-area {
 	color: #fff;
 	/* background: #1b1919 */
@@ -1445,7 +1451,7 @@ textarea:focus {
 }
 
 .single-table:hover .table-top {
-	background: #ff9902
+	background: #cc9933
 }
 
 .single-table:hover .table-top h3,
@@ -1465,7 +1471,7 @@ textarea:focus {
 
 .single-table .table-top i {
 	font-size: 50px;
-	color: #ff9902;
+	color: #cc9933;
 	margin-top: 10px
 }
 
@@ -1476,7 +1482,7 @@ textarea:focus {
 
 .single-table .template-btn:hover {
 	color: #fff !important;
-	background: #ff9902
+	background: #cc9933
 }
 
 .single-box1,
