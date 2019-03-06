@@ -33,5 +33,6 @@
     <script src="<?php  echo base_url('')?>assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="<?php  echo base_url('')?>assets/js/vendor/ion.rangeSlider.js"></script>
     <script src="<?php  echo base_url('')?>assets/js/main.js"></script>
+    <script src="<?php  echo base_url('')?>assets/js/money.js"></script>
 </body>
 </html>
