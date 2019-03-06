@@ -3,24 +3,33 @@
 // require APPPATH . '/libraries/REST_Controller.php';
  
 class Reguler extends CI_Controller {
-    function __construct($config = 'rest') {
-        parent::__construct($config);
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->library('curl');
     }
-
-    function index(){
+    
+    public function index()
+    {
         $this->load->view('partial/header');
         $this->load->view('reguler');
-        $this->load->view('partial/footer');
-
+        $this->load->view('partial/footer');    
     }
 
-    function detail(){
+    public function detail()
+    {
+
+        $pinjaman = $this->input->post('uang_pinjaman');
+        $tenor =  $this->input->post('tenor_pinjaman');
+        $datas = array(
+            'up' => str_replace(',','',$pinjaman),
+            'tenor' => $tenor,
+        );
+        $jsonString=$this->curl->simple_post('http://localhost/SimluasiPegadaian_API/index.php/reguler/kontak', $datas, array(CURLOPT_BUFFERSIZE => 10));
+        $data['detail']=json_decode($jsonString);
+
         $this->load->view('partial/header');
-        $this->load->view('detailReguler');
-        $this->load->view('partial/footer');
-
+        $this->load->view('detailReguler',$data);
+        $this->load->view('partial/footer');  
     }
-
-    
-
 }

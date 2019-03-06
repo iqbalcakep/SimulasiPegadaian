@@ -1,18 +1,5 @@
-
-
-
     <!-- Pricing Table Starts -->
     <section class="pricing-table section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-top text-center">
-                        <h2>Perfect pricing plan</h2>
-                        <p>gormless cheeky bugger he nicked it golly gosh a arse show off show off</p>
-                    </div>
-                </div>
-            </div>
-            
             <div class="row">
                 <div class="col-md-12">
                     <div class="single-table text-center mb-4 mb-md-0">
@@ -21,34 +8,24 @@
                             <i class="fa fa-money"></i>
                         </div>
                         <ul class="my-5" style="padding:30px;">
+                            <?php echo form_open('reguler/detail'); ?>
                             <li class="mb-2">
                                 <div class="mt-10">
-                                    <input type="text" name="jumlah_uang" placeholder="Jumlah Uang" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" required class="single-input-accent">
+
+                                    <input type="text"  oninput="getTenor()" placeholder="Jumlah Uang" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" required class="single-input-accent"  id="pinjaman_input" name="uang_pinjaman"  data-type="currency">
                                 </div>
                             </li><br>
                             <li class="mb-2">
-                                <div class="input-group-icon mt-10">
-                                    <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
-                                    <div class="form-select" id="default-select">
-                                        <select name="" id="input" class="form-control">
-                                            <option value="">Tenor</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="6">6</option>
-                                            <option value="12">12</option>
-                                            <option value="18">18</option>
-                                            <option value="24">24</option>
-                                            <option value="30">30</option>
-                                            <option value="36">36</option>
-                                            <option value="42">42</option>
-                                            <option value="48">48</option>
-                                            <option value="54">54</option>
-                                            <option value="60">60</option>
-                                        </select>
-                                    </div>
+                                <div id="tenors">
+                                <div class='icon'></div>
+                                <div class='form-select'>
+                                    <select id='tenor_input' name="tenor_pinjaman" class='form-control'>
+                                        <option value="100">Bulan</option>
+                                    </select>  
                                 </div>
+                            </div>
                             </li><br>
-                            <li class="mb-2">
+                            <!-- <li class="mb-2">
                                 <div class="input-group-icon mt-10">
                                     <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
                                     <div class="form-select" id="default-select">
@@ -69,139 +46,54 @@
                                         </select>
                                     </div>
                                 </div>
-                            </li> 
+                            </li>  -->
                         </ul>
-
-                        <h2>Rp. 1.0000.0000,- / bulan</h2>
+                        <div align="center" id="angsuranShow">
+                        </div>
                         <br><br>
-                        <a href="#" class="template-btn">Hitung</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#" class="template-btn">Detail</a>
+                        <a onclick="getAngsuran()" class="template-btn">Hitung Angsuran</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="submit" class="template-btn">Detail Pinjaman</button>
+                        <?php echo form_close(); ?>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Pricing Table End -->
+<script>
+    function getTenor()
+    {
+        var pinjaman = document.getElementById('pinjaman_input').value;
+        var pin = parseInt(pinjaman.replace(/,/g,""));
+        var html = "";
+        if (pin<100000000)
+        {
+            var html = "<div class='icon'></div><div class='form-select' id='tenor_id'><select name='tenor_pinjaman' id='tenor_input' class='form-control' required='required' ><option value='12'>12 Bulan</option><option value='18'>18 Bulan</option><option value='24'>24 Bulan</option><option value='36'>36 Bulan</option></select>";
+        }
+        else
+        {
+            var html = "<div class='icon'></div><div class='form-select' id='tenor_id'><select name='tenor_pinjaman' id='tenor_input' class='form-control' required='required' ><option value='12'>12 Bulan</option><option value='18'>18 Bulan</option><option value='24'>24 Bulan</option><option value='36'>36 Bulan</option><option value='48'>48 Bulan</option></select>";
+        }
+         document.getElementById("tenors").innerHTML = html; 
+    }
+    function getAngsuran(){
+        var pinjaman = document.getElementById('pinjaman_input').value;
+        var tenor = document.getElementById('tenor_input').value;
+        var pin = pinjaman.replace(/,/g,"");
+        $.ajax({
+            type: "POST",
+            url: 'http://localhost/SimluasiPegadaian_API/index.php/reguler',
+            data: {up:pin, tenor:tenor},
+            dataType: 'json',
+            success : function(response){
+                document.getElementById("angsuranShow").innerHTML ="<h2> Rp "+new Intl.NumberFormat().format(response.angsuran)+" / Bulan</h1>"
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+            alert("some error");}
+        });
+    }
 
-
-    <!-- Pricing Box Starts -->
-    <div class="pricing-box section-padding3">
-        <div class="container">
-            <div class="row">
-                <!-- oren -->
-                <div class="col-md-6">
-                    <div class="single-box1 text-center mb-4 mb-md-0">
-                                <div class="mt-10">
-                                    <input type="text" name="jumlah_uang" placeholder="Jumlah Uang" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" required class="single-input-accent">
-                                </div>
-                                <div class="input-group-icon mt-10">
-                                    <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
-                                    <div class="form-select" id="default-select">
-                                        <select name="" id="input" class="form-control">
-                                            <option value="">Tenor</option>
-                                            <option value="3">3 bulan</option>
-                                            <option value="4">4 bulan</option>
-                                            <option value="6">6 bulan</option>
-                                            <option value="12">12 bulan</option>
-                                            <option value="18">18 bulan</option>
-                                            <option value="24">24 bulan</option>
-                                            <option value="30">30 bulan</option>
-                                            <option value="36">36 bulan</option>
-                                            <option value="42">42 bulan</option>
-                                            <option value="48">48 bulan</option>
-                                            <option value="54">54 bulan</option>
-                                            <option value="60">60 bulan</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="input-group-icon mt-10">
-                                    <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
-                                    <div class="form-select" id="default-select">
-                                        <select name="" id="input" class="form-control">
-                                            <option value="">Jangka</option>
-                                            <option value="3">3 bulan</option>
-                                            <option value="4">4 bulan</option>
-                                            <option value="6">6 bulan</option>
-                                            <option value="12">12 bulan</option>
-                                            <option value="18">18 bulan</option>
-                                            <option value="24">24 bulan</option>
-                                            <option value="30">30 bulan</option>
-                                            <option value="36">36 bulan</option>
-                                            <option value="42">42 bulan</option>
-                                            <option value="48">48 bulan</option>
-                                            <option value="54">54 bulan</option>
-                                            <option value="60">60 bulan</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <br><br>
-                                <h2>Rp. 1.0000.0000,- / bulan</h2>
-                        <br><br>
-                        <a href="#" class="template-btn">Hitung</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#" class="template-btn">Detail</a></a>
-                    </div>
-                </div>
-                <!-- oren end -->
-
-                <!-- hitam -->
-                <div class="col-md-6">
-                    <div class="single-box2 text-center">
-                    <div class="mt-10">
-                                    <input type="text" name="jumlah_uang" placeholder="Jumlah Uang" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" required class="single-input-accent">
-                                </div>
-                                <div class="input-group-icon mt-10">
-                                    <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
-                                    <div class="form-select" id="default-select">
-                                        <select name="" id="input" class="form-control">
-                                            <option value="">Tenor</option>
-                                            <option value="3">3 bulan</option>
-                                            <option value="4">4 bulan</option>
-                                            <option value="6">6 bulan</option>
-                                            <option value="12">12 bulan</option>
-                                            <option value="18">18 bulan</option>
-                                            <option value="24">24 bulan</option>
-                                            <option value="30">30 bulan</option>
-                                            <option value="36">36 bulan</option>
-                                            <option value="42">42 bulan</option>
-                                            <option value="48">48 bulan</option>
-                                            <option value="54">54 bulan</option>
-                                            <option value="60">60 bulan</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="input-group-icon mt-10">
-                                    <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
-                                    <div class="form-select" id="default-select">
-                                        <select name="" id="input" class="form-control">
-                                            <option value="">Jangka</option>
-                                            <option value="3">3 bulan</option>
-                                            <option value="4">4 bulan</option>
-                                            <option value="6">6 bulan</option>
-                                            <option value="12">12 bulan</option>
-                                            <option value="18">18 bulan</option>
-                                            <option value="24">24 bulan</option>
-                                            <option value="30">30 bulan</option>
-                                            <option value="36">36 bulan</option>
-                                            <option value="42">42 bulan</option>
-                                            <option value="48">48 bulan</option>
-                                            <option value="54">54 bulan</option>
-                                            <option value="60">60 bulan</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <br><br>
-                                <h2 style="color:#ff9902;">Rp. 1.0000.0000,- / bulan</h2>
-                        <br><br>
-                        <a href="#" class="template-btn">Hitung</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#" class="template-btn">Detail</a>
-                    </div>
-                </div>
-                <!-- hitam end -->
-            </div>
-        </div>
-    </div>
-    <!-- Pricing Box End -->
-
+</script>
 
 </body>
 </html>

@@ -1,4 +1,9 @@
 <!-- Download Area Starts -->
+<?php function rupiah($angka)
+      {
+          $hasil_rupiah = number_format($angka,0,',','.');
+          return $hasil_rupiah;
+      } ?>
 <section class="download-area bgr section-padding">
     <div class="container-fluid">
         <div class="row">
@@ -14,36 +19,24 @@
                                     <tbody>
                                                 <tr>
                                                     <th>Pinjaman</th>
-                                                    <td>10.0000.000</td>
+                                                    <td>Rp <?php echo rupiah($detail->biayaAdmin) ?></td>
                                                 </tr>
-                                            
+                                                
                                                 <tr>
                                                     <th>Sewa Modal</th>
-                                                    <td>10.000.000</td>
+                                                    <td>Rp <?php echo rupiah($detail->sewaModal) ?> (<?php echo $detail->prsModal  ?> %)</td>
                                                 </tr>
                                                 <tr>
                                                     <th>Biaya Admin</th>
-                                                    <td>10.000.000</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Sewa Modal</th>
-                                                    <td>10.000.000</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Persen Modal</th>
-                                                    <td>10.000.000</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Persen Admin</th>
-                                                    <td>10.000.000</td>
+                                                    <td>Rp <?php echo rupiah($detail->biayaAdmin) ?> (<?php echo $detail->prsAdmin  ?> %)</td>
                                                 </tr>
                                                 <tr>
                                                     <th>Angsuran</th>
-                                                    <td>10.000.000</td>
+                                                    <td>Rp <?php echo rupiah($detail->angsuran) ?></td>
                                                 </tr>
                                                 <tr>
                                                     <th>Tenor</th>
-                                                    <td>10 bulan</td>
+                                                    <td><?php echo rupiah($detail->tenor) ?> Bulan</td>
                                                 </tr>
                                             </tbody>
                                     </table>
