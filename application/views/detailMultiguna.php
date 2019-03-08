@@ -64,6 +64,31 @@
                      </blockquote>
                   </div>
                </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                     <blockquote class="generic-blockquote">
+                     <h4>Persyaratan Kreasi  Multiguna</h4>
+                                    <ul class="mt-4">
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Barang Jaminan : BPKB Kendaraan bermotor (mobil atau sepeda motor)</h5></li>
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Penyaluran Pinjaman : Karyawan (Tetap, Perjanjian Kerja Waktu, Tertentu,</h5></li>
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> WNI berusia min. 21 tahun dan maks. 60 tahun.</h5></li>
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Untuk karyawan atau non karyawan dengan masa kerja minimal 1 tahun.</h5></li>
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Menyerahkan dokumen, meliputi: </h5></li>
+                                        <ul>
+                                            <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Foto Nasabah</h5></li>
+                                            <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Fotokopi KTP Nasabah dan Pasangan/Keluarga dalam Satu Kartu Keluarga</h5></li>
+                                            <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Fotokopi Kartu Keluarga</h5></li>
+                                            <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Foto Barang Jaminan (Fisik Kendaraan dan Dokumen Kepemilikan)</h5></li>
+                                            <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Foto Tempat Kerja</h5></li>
+                                            <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Fotokopi Izin Praktek Kerja/Usaha atau Surat Keterangan Kerja/Sejenisnya</h5></li>
+                                            <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Fotokopi Bukti Kepemilikan Tempat Tinggal (khusus pekerja sektor non formal)</h5></li>
+                                            <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Fotokopi Pajak Bumi dan Bangunan dan/atau Rekening Listrik/Telepon/Air (khusus pekerja sektor non formal)</h5></li>
+                                        </ul>
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Pembayaran angsuran dapat melalui aplikasi Pegadaian Digital, Agen Pegadaian dan outlet Pegadaian di seluruh Indonesia</h5></li>
+                                    </ul>
+                     </blockquote>
+                  </div>
+               </div>
             </div>
          </div>
          <!-- <div class="col-lg-6 pr-0">

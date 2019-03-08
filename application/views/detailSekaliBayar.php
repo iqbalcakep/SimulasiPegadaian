@@ -61,6 +61,30 @@
                      </blockquote>
                   </div>
                </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                     <blockquote class="generic-blockquote">
+                     <h4>Persyaratan Kreasi Fleksi Sekali Bayar</h4>
+                                    <ul class="mt-4">
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Barang Jaminan : BPKB Kendaraan bermotor (mobil atau sepeda motor)</h5></li>
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Pengusaha mikro atau pengusaha kecil yang memiliki usaha produktif. </h5></li>
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Identitas calon nasabah yang jelas :</h5></li>
+                                        <ul>
+                                            <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Kartu Tanda Penduduk/KTP,</h5></li>
+                                            <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Kartu Keluarga/KK,</h5></li>
+                                            <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> dan Surat Nikah (bila sudah menikah) dengan menunjukkan aslinya;</h5></li>
+                                        </ul>
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Memiliki tempat tinggal tetap. </h5></li>
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Usia usahanya sudah lebih dari 1 (satu) tahun.</h5></li>
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Jenis usahanya tidak termasuk yang dilarang diberikan;</h5></li>
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Copy Surat Keterangan Usaha dengan menunjukkan aslinya;</h5></li>
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Copy rekening tagihan telepon/listrik/bukti pembayaran PBB yang terakhir;</h5></li>
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Menyerahkan dokumen kepemilikan agunan yang diperlukan;</h5></li>
+                                        <li class="mb-3"><h5><i class="fa fa-arrow-right"></i> Jarak tempat usaha calon nasabah maksimal 15 km.</h5></li>
+                                    </ul>
+                     </blockquote>
+                  </div>
+               </div>
             </div>
          </div>
          <!-- <div class="col-lg-6 pr-0">
