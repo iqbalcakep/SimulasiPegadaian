@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required Meta Tags -->
@@ -20,6 +19,7 @@
     <link rel="stylesheet" href="<?php echo base_url('') ?>assets/css/owl-carousel.min.css">
     <link rel="stylesheet" href="<?php echo base_url('') ?>assets/css/nice-select.css">
     <link rel="stylesheet" href="<?php echo base_url('') ?>assets/css/style.css">
+    <script src="<?php  echo base_url('')?>assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 </head>
 <!-- Preloader Starts -->
@@ -27,3 +27,4 @@
     <div class="spinner"></div>
 </div>
 <!-- Preloader End -->
+
