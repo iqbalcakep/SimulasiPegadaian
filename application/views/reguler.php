@@ -11,7 +11,6 @@
                             <?php echo form_open('reguler/detail'); ?>
                             <li class="mb-2">
                                 <div class="mt-10">
-
                                     <input type="text"  oninput="getTenor()" placeholder="Jumlah Uang" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" required class="single-input-accent"  id="pinjaman_input" name="uang_pinjaman"  data-type="currency">
                                 </div>
                             </li><br>
@@ -78,18 +77,22 @@
     }
     function getAngsuran(){
         var pinjaman = document.getElementById('pinjaman_input').value;
+        document.getElementById("pinjaman_input").enctype = "application/x-www-form-urlencoded";
         var tenor = document.getElementById('tenor_input').value;
+        document.getElementById("tenor_input").enctype = "application/x-www-form-urlencoded";
         var pin = pinjaman.replace(/,/g,"");
         $.ajax({
             type: "POST",
-            url: 'http://localhost/SimluasiPegadaian_API/index.php/reguler',
+            enctype : "application/x-www-form-urlencoded",
+            // url: 'http://localhost/SimluasiPegadaian_API/index.php/reguler',
+            url: 'http://localhost:8085/index.php/reguler/',
             data: {up:pin, tenor:tenor},
             dataType: 'json',
             success : function(response){
                 document.getElementById("angsuranShow").innerHTML ="<h2> Rp "+new Intl.NumberFormat().format(response.angsuran)+" / Bulan</h1>"
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("some error");}
+            alert(textStatus);}
         });
     }
 
