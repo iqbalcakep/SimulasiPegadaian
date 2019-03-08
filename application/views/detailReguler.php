@@ -19,7 +19,11 @@
                                     <tbody>
                                                 <tr>
                                                     <th>Pinjaman</th>
-                                                    <td>Rp <?php echo rupiah($detail->biayaAdmin) ?></td>
+                                                    <td>Rp <?php echo rupiah($detail->pinjaman) ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Angsuran Pokok</th>
+                                                    <td>Rp <?php echo rupiah($detail->angsuranPokok) ?></td>
                                                 </tr>
                                                 
                                                 <tr>
