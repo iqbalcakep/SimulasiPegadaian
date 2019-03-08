@@ -1,4 +1,5 @@
-    <!-- Pricing Table Starts -->
+
+   <!-- Pricing Table Starts -->
     <section class="pricing-table section-padding">
             <div class="row">
                 <div class="col-md-12">
@@ -11,7 +12,8 @@
                             <?php echo form_open('reguler/detail'); ?>
                             <li class="mb-2">
                                 <div class="mt-10">
-                                    <input type="text"  oninput="getTenor()" placeholder="Jumlah Uang" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" required class="single-input-accent"  id="pinjaman_input" name="uang_pinjaman"  data-type="currency">
+
+                                    <input type="text" oninput="getTenor()" placeholder="Jumlah Uang" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" class="single-input-accent"  id="pinjaman_input" name="uang_pinjaman"  data-type="currency" required >
                                 </div>
                             </li><br>
                             <li class="mb-2">
@@ -24,34 +26,12 @@
                                 </div>
                             </div>
                             </li><br>
-                            <!-- <li class="mb-2">
-                                <div class="input-group-icon mt-10">
-                                    <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
-                                    <div class="form-select" id="default-select">
-                                        <select name="" id="input" class="form-control">
-                                            <option value="">Jangka</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="6">6</option>
-                                            <option value="12">12</option>
-                                            <option value="18">18</option>
-                                            <option value="24">24</option>
-                                            <option value="30">30</option>
-                                            <option value="36">36</option>
-                                            <option value="42">42</option>
-                                            <option value="48">48</option>
-                                            <option value="54">54</option>
-                                            <option value="60">60</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </li>  -->
                         </ul>
                         <div align="center" id="angsuranShow">
                         </div>
                         <br><br>
                         <a onclick="getAngsuran()" class="template-btn">Hitung Angsuran</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button type="submit" class="template-btn">Detail Pinjaman</button>
+                        <button type="submit"  class="template-btn">Detail Pinjaman</button>
                         <?php echo form_close(); ?>
                     </div>
                 </div>

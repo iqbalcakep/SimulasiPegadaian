@@ -19,6 +19,10 @@ class Reguler extends CI_Controller {
     public function detail()
     {
 
+        if ( $this->input->post('uang_pinjaman')=="")
+        {
+            redirect('reguler');
+        }
         $pinjaman = $this->input->post('uang_pinjaman');
         $tenor =  $this->input->post('tenor_pinjaman');
         $datas = array(
