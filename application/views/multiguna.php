@@ -9,7 +9,7 @@
                             <i class="fa fa-money"></i>
                         </div>
                         <ul class="my-5" style="padding:30px;">
-                            <?php echo form_open('multigunagit /detail'); ?>
+                            <?php echo form_open('multiguna/detail'); ?>
                             <li class="mb-2">
                                 <div class="mt-10">
 
