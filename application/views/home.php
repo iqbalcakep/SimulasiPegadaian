@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="single-category text-center mb-4">
-                        <a href="<?php echo site_url('reguler') ?>">
+                        <a href="<?php echo site_url('sekalibayar') ?>">
                             <img src="<?php echo base_url('') ?>assets/images/icon2.png" style="width:128px;height:auto;"alt="category">
                             <h3>Kreasi Fleksi</h3>
                         </a>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="single-category text-center mb-4">
-                        <a href="<?php echo site_url('reguler') ?>">
+                        <a href="<?php echo site_url('berjangka') ?>">
                             <img src="<?php echo base_url('') ?>assets/images/icon3.png" style="width:128px;height:auto;"alt="category">
                             <h3>Kreasi Fleksi Berjangka</h3>
                         </a>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="single-category text-center mb-4">
-                        <a href="<?php echo site_url('reguler') ?>">
+                        <a href="<?php echo site_url('multiguna') ?>">
                             <img src="<?php echo base_url('') ?>assets/images/icon4.png" style="width:128px;height:auto;"alt="category">
                             <h3>Kreasi Multiguna</h3>
                         </a>

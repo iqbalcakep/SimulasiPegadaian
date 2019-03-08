@@ -2,7 +2,7 @@
  defined('BASEPATH') OR exit('No direct script access allowed');
 // require APPPATH . '/libraries/REST_Controller.php';
  
-class Reguler extends CI_Controller {
+class Berjangka extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
@@ -12,29 +12,26 @@ class Reguler extends CI_Controller {
     public function index()
     {
         $this->load->view('partial/header');
-        $this->load->view('reguler');
+        $this->load->view('berjangka');
         $this->load->view('partial/footer');    
     }
 
     public function detail()
     {
 
-        if ( $this->input->post('uang_pinjaman')=="")
-        {
-            redirect('reguler');
-        }
         $pinjaman = $this->input->post('uang_pinjaman');
         $tenor =  $this->input->post('tenor_pinjaman');
+        $pola = $this->input->post("pola");
         $datas = array(
             'up' => str_replace(',','',$pinjaman),
             'tenor' => $tenor,
+            'pola'=> $pola
         );
-        $jsonString=$this->curl->simple_post('http://localhost:8085/index.php/reguler/', $datas, array(CURLOPT_BUFFERSIZE => 10));
-        // $jsonString=$this->curl->simple_post('http://localhost/SimluasiPegadaian_API/index.php/reguler/', $datas, array(CURLOPT_BUFFERSIZE => 10));
+        $jsonString=$this->curl->simple_post('http://localhost/SimluasiPegadaian_API/index.php/Berjangka', $datas, array(CURLOPT_BUFFERSIZE => 10));
         $data['detail']=json_decode($jsonString);
-        //var_dump($data['detail']);
+
         $this->load->view('partial/header');
-        $this->load->view('detailReguler',$data);
+        $this->load->view('detailBerjangka',$data);
         $this->load->view('partial/footer');  
     }
 }

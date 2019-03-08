@@ -2,7 +2,7 @@
  defined('BASEPATH') OR exit('No direct script access allowed');
 // require APPPATH . '/libraries/REST_Controller.php';
  
-class Reguler extends CI_Controller {
+class Multiguna extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
@@ -12,7 +12,7 @@ class Reguler extends CI_Controller {
     public function index()
     {
         $this->load->view('partial/header');
-        $this->load->view('reguler');
+        $this->load->view('multiguna');
         $this->load->view('partial/footer');    
     }
 
@@ -29,12 +29,11 @@ class Reguler extends CI_Controller {
             'up' => str_replace(',','',$pinjaman),
             'tenor' => $tenor,
         );
-        $jsonString=$this->curl->simple_post('http://localhost:8085/index.php/reguler/', $datas, array(CURLOPT_BUFFERSIZE => 10));
-        // $jsonString=$this->curl->simple_post('http://localhost/SimluasiPegadaian_API/index.php/reguler/', $datas, array(CURLOPT_BUFFERSIZE => 10));
+        $jsonString=$this->curl->simple_post('http://localhost/SimluasiPegadaian_API/index.php/multiguna/', $datas, array(CURLOPT_BUFFERSIZE => 10));
         $data['detail']=json_decode($jsonString);
-        //var_dump($data['detail']);
+
         $this->load->view('partial/header');
-        $this->load->view('detailReguler',$data);
+        $this->load->view('detailMultiguna',$data);
         $this->load->view('partial/footer');  
     }
 }
