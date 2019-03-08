@@ -12,7 +12,7 @@
                             <li class="mb-2">
                                 <div class="mt-10">
 
-                                    <input type="text"  oninput="getTenor()" placeholder="Jumlah Uang" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" required class="single-input-accent"  id="pinjaman_input" name="uang_pinjaman"  data-type="currency">
+                                    <input type="text" oninput="getTenor()" placeholder="Jumlah Uang" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" class="single-input-accent"  id="pinjaman_input" name="uang_pinjaman"  data-type="currency" required >
                                 </div>
                             </li><br>
                             <li class="mb-2">
@@ -52,7 +52,7 @@
                         </div>
                         <br><br>
                         <a onclick="getAngsuran()" class="template-btn">Hitung Angsuran</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button type="submit" class="template-btn">Detail Pinjaman</button>
+                        <button type="submit"  class="template-btn">Detail Pinjaman</button>
                         <?php echo form_close(); ?>
                     </div>
                 </div>
