@@ -13,32 +13,6 @@
             </div>
             <div>
             </div>
-            <!-- <div class="main-menu">
-               <ul>
-                   <li class="active"><a href="index.html">home</a></li>
-                   <li><a href="about.html">about us</a></li>
-                   <li><a href="job-category.html">category</a></li>
-                   <li><a href="#">blog</a>
-                       <ul class="sub-menu">
-                           <li><a href="blog-home.html">Blog Home</a></li>
-                           <li><a href="blog-details.html">Blog Details</a></li>
-                       </ul>
-                   </li>
-                   <li><a href="contact-us.html">contact</a></li>
-                   <li><a href="#">pages</a>
-                       <ul class="sub-menu">
-                           <li><a href="job-search.html">Job Search</a></li>
-                           <li><a href="job-single.html">Job Single</a></li>
-                           <li><a href="pricing-plan.html">Pricing Plan</a></li>
-                           <li><a href="elements.html">Elements</a></li>
-                       </ul>
-                   </li>
-                   <li class="menu-btn">
-                       <a href="#" class="login">log in</a>
-                       <a href="#" class="template-btn">sign up</a>
-                   </li>
-               </ul>
-               </div> -->
          </div>
       </div>
    </div>
@@ -123,8 +97,8 @@
        $.ajax({
            type: "POST",
            enctype : "application/x-www-form-urlencoded",
-           // url: 'http://localhost/SimluasiPegadaian_API/index.php/reguler',
-           url: 'http://localhost:8085/index.php/reguler/',
+           url: 'http://192.168.0.101/SimluasiPegadaian_API/index.php/reguler',
+           //url: 'http://localhost:8085/index.php/reguler/',
            data: {up:pin, tenor:tenor},
            dataType: 'json',
            success : function(response){
