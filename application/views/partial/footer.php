@@ -1,5 +1,5 @@
 <!-- Footer Area Starts -->
-<footer class="footer-area section-padding">
+<footer class="footer-area section-padding-custom">
         <div class="footer-copyright">
             <div class="container">
                 <div class="row">
@@ -23,7 +23,7 @@
         </div>
 </footer>
     <!-- Footer Area End -->
-
+</section>
 
     <!-- Javascript -->
     

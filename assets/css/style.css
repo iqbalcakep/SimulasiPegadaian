@@ -3681,6 +3681,9 @@ form .template-btn {
 	background: #ff9902;
 	border: 1px solid transparent
 }
+.section-padding-custom {
+	padding: 40px 0px;
+}
 
 .section-padding {
 	padding: 140px 0px;
