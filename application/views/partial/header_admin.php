@@ -72,20 +72,20 @@
         <nav class="navbar navbar-expand-sm navbar-default">
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li <?php if($this->uri->segment(1)=="Admin_reguler"){echo "class='active'";} ?>>
                         <a href="<?php echo site_url('Admin_reguler') ?>"><i class="menu-icon fa fa-money"></i>Kreasi Reguler </a>
                     </li>
-                    <li>
+                    <li <?php if($this->uri->segment(1)=="Admin_multi"){echo "class='active'";} ?>>
                         <a href="<?php echo site_url('Admin_multi') ?>"><i class="menu-icon fa fa-id-badge"></i>Kreasi Multiguna </a>
                     </li>
-                    <li class="menu-item-has-children dropdown">
+                    <li <?php if($this->uri->segment(1)=="Admin_berjangka" || $this->uri->segment(1)=="Admin_sekali"){echo "class='menu-item-has-children dropdown active'";} else {echo "class='menu-item-has-children dropdown'";}?>>
                         <a href="<?php echo base_url('') ?>#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-clock-o"></i>Kreasi Fleksi</a>
                         <ul class="sub-menu children dropdown-menu">                            
-                            <li><i class="fa fa-puzzle-piece"></i><a href="<?php echo site_url('Admin_berjangka') ?>">Fleksi Berjangka</a></li>
-                            <li><i class="fa fa-bolt"></i><a href="<?php echo site_url('Admin_sekali') ?>">Fleksi Sekali Bayar</a></li>
+                        <li><i class="fa fa-puzzle-piece"></i><a href="<?php echo site_url('Admin_berjangka') ?>">Fleksi Berjangka</a></li>
+                        <li ><i class="fa fa-bolt"></i><a href="<?php echo site_url('Admin_sekali') ?>">Fleksi Sekali Bayar</a></li>
                        </ul>
                     </li>
-                    <li>
+                    <li <?php if($this->uri->segment(1)=="Admin_biaya"){echo "class='active'";} ?>>
                         <a href="<?php echo site_url('Admin_biaya') ?>"><i class="menu-icon fa fa-file-text"></i>Biaya Administrasi </a>
                     </li>
                 </ul>

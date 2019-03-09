@@ -97,7 +97,7 @@
        $.ajax({
            type: "POST",
            enctype : "application/x-www-form-urlencoded",
-           url: 'http://localhost/SimluasiPegadaian_API/index.php/reguler',
+           url: 'http://192.168.0.101/SimluasiPegadaian_API/index.php/reguler',
            //url: 'http://localhost:8085/index.php/reguler/',
            data: {up:pin, tenor:tenor},
            dataType: 'json',
