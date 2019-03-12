@@ -23,8 +23,8 @@
         </div>
 </footer>
     <!-- Footer Area End -->
-</section>
 
+</section>
     <!-- Javascript -->
     
 	<script src="<?php  echo base_url('')?>assets/js/vendor/bootstrap-4.1.3.min.js"></script>

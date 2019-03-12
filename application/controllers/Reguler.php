@@ -30,7 +30,7 @@ class Reguler extends CI_Controller {
             'tenor' => $tenor,
         );
         //$jsonString=$this->curl->simple_post('http://localhost:8085/index.php/reguler/', $datas, array(CURLOPT_BUFFERSIZE => 10));
-        $jsonString=$this->curl->simple_post('http://localhost/SimluasiPegadaian_API/index.php/reguler/', $datas, array(CURLOPT_BUFFERSIZE => 10));
+        $jsonString=$this->curl->simple_post('https://api.thegadeareamalang.com/simulasikreasi/index.php/reguler/', $datas, array(CURLOPT_BUFFERSIZE => 10));
         $data['detail']=json_decode($jsonString);
         //var_dump($data['detail']);
         $this->load->view('partial/header');

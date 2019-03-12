@@ -24,16 +24,18 @@
       <div class="col-md-12">
          <div class="single-table text-center mb-4 mb-md-0">
             <div class="table-top">
-               <h3>Arrum BPKB</h3>
+               <h3>ARRUM HAJI</h3>
                <i class="fa fa-money"></i>
             </div>
             <ul class="my-5" style="padding:30px;">
-                <?php echo form_open('Arumbpkb/detail'); ?>
-                <li class="mb-2">
+                <?php echo form_open('Haji/detail'); ?>
+                <!-- <li class="mb-2">
                     <div class="mt-10">
                         <input type="text" placeholder="Taksiran Kendaraan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Uang Pinjaman'" required class="single-input-accent"  id="taksiran" name="taksiran"  data-type="currency">
                     </div>
-                </li><br>
+                </li><br> -->
+                <h3>Arrum Haji Gadai Emas untuk Mendapatkan Porsi Haji.</h3>
+                <h3>Senilai 25 juta!</h3><br><br>
                 <li  class="mb-2">
                     <div >
                         <select id='akad' name="akad" class='form-control'>
@@ -47,7 +49,7 @@
                     </div>
                 </li>
                 <br>
-                <li class="mb-2" style="margin-top:10px;">
+                <!-- <li class="mb-2" style="margin-top:10px;">
                     <div style="padding-top:40px">
                         <select id='jenis' name="jenis" class='form-control'>
                         <option value="3">Jenis Kendaraan</option>
@@ -56,14 +58,13 @@
                         </select>  
                     </div>
                 </li>
-                <br>
+                <br> -->
             </ul>
             <div class="mb-3" style="padding-top=20%">
                 <div align="center" id="maxPin">
                 </div>
                 <div align="center" id="angsuranShow">
                 </div>
-            </div>
             </div>
             <div class="mb-5" style="padding-left:5%;padding-right:5%;">
                    <div class="row">

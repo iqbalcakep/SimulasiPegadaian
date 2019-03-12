@@ -4,7 +4,7 @@
       <div class="row">
          <div class="col-lg-2">
             <div class="logo-area">
-               <a href="index.html"><img style="width:128px;height:auto" src="<?php echo base_url('') ?>assets/images/logo/logold.png" alt="logo"></a>
+               <a><img style="width:128px;height:auto" src="<?php echo base_url('') ?>assets/images/logo/logold.png" alt="logo"></a>
             </div>
          </div>
          <div class="col-lg-10">
@@ -61,6 +61,7 @@
                               </tr>
                            </tbody>
                         </table>
+                        <h6><font color="red">* Belum termasuk biaya notaris</font></h6>
                      </blockquote>
                   </div>
                </div>

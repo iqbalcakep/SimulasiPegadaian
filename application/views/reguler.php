@@ -4,7 +4,7 @@
       <div class="row">
          <div class="col-lg-2">
             <div class="logo-area">
-               <a href="index.html"><img style="width:128px;height:auto" src="<?php echo base_url('') ?>assets/images/logo/logold.png" alt="logo"></a>
+               <a><img style="width:128px;height:auto" src="<?php echo base_url('') ?>assets/images/logo/logold.png" alt="logo"></a>
             </div>
          </div>
          <div class="col-lg-10">
@@ -32,7 +32,7 @@
                <?php echo form_open('reguler/detail'); ?>
                <li class="mb-2">
                   <div class="mt-10">
-                     <input type="text" oninput="getTenor()" placeholder="Jumlah Uang" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" class="single-input-accent"  id="pinjaman_input" name="uang_pinjaman"  data-type="currency" required >
+                     <input type="text" oninput="getTenor()" placeholder="Uang Pinjaman" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" class="single-input-accent"  id="pinjaman_input" name="uang_pinjaman"  data-type="currency" required >
                   </div>
                </li>
                <br>
@@ -97,7 +97,7 @@
        $.ajax({
            type: "POST",
            enctype : "application/x-www-form-urlencoded",
-           url: 'http://192.168.0.101/SimluasiPegadaian_API/index.php/reguler',
+           url: 'https://api.thegadeareamalang.com/simulasikreasi/index.php/reguler',
            //url: 'http://localhost:8085/index.php/reguler/',
            data: {up:pin, tenor:tenor},
            dataType: 'json',

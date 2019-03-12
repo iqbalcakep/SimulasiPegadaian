@@ -3,7 +3,7 @@
       <div class="row">
          <div class="col-lg-2">
             <div class="logo-area">
-               <a href="index.html"><img style="width:128px;height:auto" src="<?php echo base_url('') ?>assets/images/logo/logold.png" alt="logo"></a>
+               <a><img style="width:128px;height:auto" src="<?php echo base_url('') ?>assets/images/logo/logold.png" alt="logo"></a>
             </div>
          </div>
          <div class="col-lg-10">
@@ -28,10 +28,10 @@
                <i class="fa fa-money"></i>
             </div>
             <ul class="my-5" style="padding:30px;">
-               <?php echo form_open('sekalibayar/detail'); ?>
+               <?php echo form_open('SekaliBayar/detail'); ?>
                <li class="mb-2">
                   <div class="mt-10">
-                     <input type="text" oninput="getTenor()" placeholder="Jumlah Uang" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" class="single-input-accent"  id="pinjaman_input" name="uang_pinjaman"  data-type="currency" required >
+                     <input type="text" oninput="getTenor()" placeholder="Uang Pinjaman" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" class="single-input-accent"  id="pinjaman_input" name="uang_pinjaman"  data-type="currency" required >
                   </div>
                </li>
                <br>
@@ -87,7 +87,7 @@
         var pin = pinjaman.replace(/,/g,"");
         $.ajax({
             type: "POST",
-            url: 'http://localhost/SimluasiPegadaian_API/index.php/FleksiSekaliBayar',
+            url: 'https://api.thegadeareamalang.com/simulasikreasi/index.php/FleksiSekaliBayar',
             data: {up:pin, tenor:tenor},
             dataType: 'json',
             success : function(response){

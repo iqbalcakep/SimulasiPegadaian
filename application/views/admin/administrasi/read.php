@@ -19,6 +19,10 @@
                                             <th class="serial">#</th>
                                             <th>Tenor</th>
                                             <th>Biaya Administrasi</th>
+                                            <th>Jamkrindo</th>
+                                            <th>Jasa Raharja</th>
+                                            <th>Total</th>
+                                            <th>Biaya Administrasi</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -27,6 +31,9 @@
                                         <tr>
                                             <td class="serial"><?php echo $key->id_admin ?></td>
                                             <td><?php echo $key->bulan." bulan" ?></td>
+                                            <td><?php echo $key->adm." %" ?></td>
+                                            <td><?php echo $key->jamkrindo." %" ?></td>
+                                            <td><?php echo $key->jasa_raharja." %" ?></td>
                                             <td><?php echo $key->biaya_admin." %" ?></td>
                                             <td>
                                                 <a href="<?php echo site_url('Admin_biaya/update/').$key->id_admin ?>" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
@@ -69,7 +76,48 @@
                                 <label for="cc-payment" class="control-label mb-1">Biaya Administrasi</label>
                                 <div class="input-group">
                                 
-                                <input class="form-control" type="number" step="0.001" id="biaya_admin" name="biaya_admin" placeholder="Biaya Admin" >
+                                <input class="form-control" type="number" step="0.001" id="adm" name="adm" placeholder="Biaya Admin" onchange="sum()" onkeyup="sum()">
+                                <div class="input-group-addon">
+                                        <span>%</span>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label for="cc-payment" class="control-label mb-1">Jamkrindo</label>
+                                <div class="input-group">
+                                
+                                <input class="form-control" type="number" step="0.001" id="jamkrindo" name="jamkrindo" placeholder="Jamkrindo" onchange="sum()" onkeyup="sum()">
+                                <div class="input-group-addon">
+                                        <span>%</span>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label for="cc-payment" class="control-label mb-1">Jasa Raharja</label>
+                                <div class="input-group">
+                                
+                                <input class="form-control" type="number" step="0.001" id="jasa_raharja" name="jasa_raharja" placeholder="Jasa Raharja" onchange="sum()" onkeyup="sum()">
+                                <div class="input-group-addon">
+                                        <span>%</span>
+                                </div>
+                                </div>
+                            </div>
+                            <script>
+                            function sum() {
+                                var txtFirstNumberValue = document.getElementById('adm').value;
+                                var txtSecondNumberValue = document.getElementById('jamkrindo').value;
+                                var txtThirdNumberValue = document.getElementById('jasa_raharja').value;
+                                var result = parseFloat(txtFirstNumberValue) + parseFloat(txtSecondNumberValue) + parseFloat(txtThirdNumberValue);
+                                if (!isNaN(result)) {
+                                    document.getElementById('biaya_admin').value = result;
+                                }
+                            }
+                            </script>
+                            <div class="form-group col-lg-12">
+                                <label for="cc-payment" class="control-label mb-1">Total Biaya Administrasi</label>
+                                <div class="input-group">
+                                
+                                <input class="form-control" type="number" step="0.001" id="biaya_admin" name="biaya_admin" placeholder="Biaya Admin" readonly >
                                 <div class="input-group-addon">
                                         <span>%</span>
                                 </div>

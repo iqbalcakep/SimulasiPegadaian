@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-lg-12" style="padding:8%;margin-top:10px">
             <div class="section-top-border">
-						<h3 class="mb-10 title_color">Detail Arrum BPKB</h3>
+						<h3 class="mb-10 title_color">Detail Amanah</h3>
 						<div class="row">
 							<div class="col-lg-12">
 								<blockquote class="generic-blockquote">

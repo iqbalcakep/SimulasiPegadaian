@@ -25,7 +25,7 @@ class SekaliBayar extends CI_Controller {
             'up' => str_replace(',','',$pinjaman),
             'tenor' => $tenor,
         );
-        $jsonString=$this->curl->simple_post('http://localhost/SimluasiPegadaian_API/index.php/FleksiSekaliBayar/', $datas, array(CURLOPT_BUFFERSIZE => 10));
+        $jsonString=$this->curl->simple_post('https://api.thegadeareamalang.com/simulasikreasi/index.php/FleksiSekaliBayar/', $datas, array(CURLOPT_BUFFERSIZE => 10));
         $data['detail']=json_decode($jsonString);
 
         $this->load->view('partial/header');

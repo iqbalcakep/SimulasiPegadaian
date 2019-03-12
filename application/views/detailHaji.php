@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-lg-12" style="padding:8%;margin-top:10px">
             <div class="section-top-border">
-						<h3 class="mb-10 title_color">Detail Arrum BPKB</h3>
+						<h3 class="mb-10 title_color">Detail Arrum Haji</h3>
 						<div class="row">
 							<div class="col-lg-12">
 								<blockquote class="generic-blockquote">
@@ -36,19 +36,9 @@
                                     <table class="table table-bordered table-hover">
                                     <tbody>
                                                 <tr>
-                                                    <th>Taksiran Kendaraan</th>
-                                                    <td>Rp <?php echo rupiah($detail->taksiran) ?></td>
-                                                </tr>
-                                                
-                                                <tr>
                                                     <th>Uang Pinjaman</th>
                                                     <td>Rp <?php echo rupiah($detail->pinjaman) ?></td>
                                                 </tr>
-                                                <tr>
-                                                    <th>Mu'nah</th>
-                                                    <td>Rp <?php echo rupiah($detail->munah) ?></td>
-                                                </tr>
-                                                
                                                 <tr>
                                                     <th>Angsuran Pokok</th>
                                                     <td>Rp <?php echo rupiah($detail->angsuranPokok) ?></td>
@@ -58,9 +48,20 @@
                                                     <td>Rp <?php echo rupiah($detail->angsuran) ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Jenis Kendaraan</th>
-                                                    <td><?php echo $detail->jenis; ?></td>
+                                                    <th>Biaya Awal</th>
+                                                    <td>Rp <?php echo rupiah($detail->angsuran) ?></td>
                                                 </tr>
+                                                <tr>
+                                                    <th>Buka Rekening</th>
+                                                    <td>Rp <?php echo rupiah($detail->angsuran) ?></td>
+                                                </tr>
+                                                
+                                                
+                                                <!-- <tr>
+                                                    <th>Mu'nah</th>
+                                                    <td>Rp <?php echo rupiah($detail->munah) ?></td>
+                                                </tr>
+                                                
                                                 <tr>
                                                     <th>Biaya Admin</th>
                                                     <td>Rp <?php echo rupiah($detail->biayaAdmin) ?></td>
@@ -72,7 +73,7 @@
                                                 <tr>
                                                     <th>Akad</th>
                                                     <td><?php echo $detail->tenor ?> Bulan</td>
-                                                </tr>
+                                                </tr> -->
                                                 
 
                                             </tbody>

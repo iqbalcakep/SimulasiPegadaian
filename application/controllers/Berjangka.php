@@ -27,7 +27,7 @@ class Berjangka extends CI_Controller {
             'tenor' => $tenor,
             'pola'=> $pola
         );
-        $jsonString=$this->curl->simple_post('http://localhost/SimluasiPegadaian_API/index.php/Berjangka', $datas, array(CURLOPT_BUFFERSIZE => 10));
+        $jsonString=$this->curl->simple_post('https://api.thegadeareamalang.com/simulasikreasi/index.php/Berjangka', $datas, array(CURLOPT_BUFFERSIZE => 10));
         $data['detail']=json_decode($jsonString);
 
         $this->load->view('partial/header');

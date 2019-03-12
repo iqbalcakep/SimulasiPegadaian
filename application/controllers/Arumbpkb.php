@@ -19,19 +19,19 @@ class Arumbpkb extends CI_Controller {
     public function detail()
     {
 
-        $pinjaman = $this->input->post('uang_pinjaman');
-        $tenor =  $this->input->post('tenor_pinjaman');
-        $pola = $this->input->post("pola");
+        $akad = $this->input->post('akad');
+        $taksiran =  $this->input->post('taksiran');
+        $jenis = $this->input->post("jenis");
         $datas = array(
-            'up' => str_replace(',','',$pinjaman),
-            'tenor' => $tenor,
-            'pola'=> $pola
+            'taksiran' => str_replace(',','',$taksiran),
+            'akad' => $akad,
+            'jenis'=> $jenis
         );
-        $jsonString=$this->curl->simple_post('http://localhost/SimluasiPegadaian_API/index.php/Berjangka', $datas, array(CURLOPT_BUFFERSIZE => 10));
+        $jsonString=$this->curl->simple_post('https://api.thegadeareamalang.com/simulasikreasi/index.php/Arrum', $datas, array(CURLOPT_BUFFERSIZE => 10));
         $data['detail']=json_decode($jsonString);
 
         $this->load->view('partial/header');
-        $this->load->view('detailBerjangka',$data);
+        $this->load->view('detailArumbpkb',$data);
         $this->load->view('partial/footer');  
     }
 }
