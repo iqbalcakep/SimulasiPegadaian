@@ -34,4 +34,10 @@ class Amanah extends CI_Controller {
         $this->load->view('detailAmanah',$data);
         $this->load->view('partial/footer');  
     }
+
+    public function amanah2(){
+        $this->load->view('partial/header');
+        $this->load->view('amanah2');
+        $this->load->view('partial/footer');  
+    }
 }

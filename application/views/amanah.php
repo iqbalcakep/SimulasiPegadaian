@@ -31,13 +31,22 @@
                 <?php echo form_open('Amanah/detail'); ?>
                 <li class="mb-2">
                     <div class="mt-10">
-                        <input type="text" placeholder="Taksiran Kendaraan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Uang Pinjaman'" required class="single-input-accent"  id="taksiran" name="taksiran"  data-type="currency">
+                        <input type="text" placeholder="Harga Kendaraan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Harga Kendaraan'" required class="single-input-accent"  id="taksiran" name="taksiran"  data-type="currency">
                     </div>
                 </li><br>
                 <li  class="mb-2">
                     <div >
-                        <select id='akad' name="akad" class='form-control'>
-                        <option value="3">Metode Angsuran</option>
+                        <select id='akad' name="akad" class='form-control' required="">
+                            <?php for ($i=date('Y'); $i > date('Y')-10 ; $i--) {?>
+                            <option value="<?php echo $i ?>"><?php echo $i ?></option>
+                            <?php } ?>
+                        </select>  
+                    </div>
+                </li>
+                <li  class="mb-2">
+                    <div >
+                        <select id='akad' name="akad" class='form-control' required="">
+                            <option>Metode Angsuran</option>
                             <option value="12">12 Bulanan</option>
                             <option value="18">18 Bulanan</option>
                             <option value="24">24 Bulanan</option>
@@ -50,13 +59,22 @@
                 <li class="mb-2" style="margin-top:10px;">
                     <div style="padding-top:40px">
                         <select id='jenis' name="jenis" class='form-control'>
-                        <option value="3">Jenis Kendaraan</option>
+                        <option>Jenis Kendaraan</option>
                             <option value="200000">Mobil</option>
                             <option value="70000">Motor</option>
                         </select>  
                     </div>
                 </li>
                 <br>
+                <li class="mb-2" style="margin-top:10px;">
+                    <div style="padding-top:40px">
+                        <select id='jenis' name="jenis" class='form-control'>
+                        <option>Jenis Pegawai / Usaha</option>
+                            <option value="200000">Usaha Mikro</option>
+                            <option value="70000">Pegawai Eksternal</option>
+                        </select>  
+                    </div>
+                </li>
             </ul>
             <div class="mb-3" style="padding-top=20%">
                 <div align="center" id="maxPin">

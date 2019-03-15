@@ -36,48 +36,48 @@
                                     <table class="table table-bordered table-hover">
                                     <tbody>
                                                 <tr>
-                                                    <th>Taksiran Kendaraan</th>
+                                                    <th>Harga Kendaraan</th>
                                                     <td>Rp <?php echo rupiah($detail->taksiran) ?></td>
                                                 </tr>
                                                 
                                                 <tr>
-                                                    <th>Uang Pinjaman</th>
+                                                    <th>DP</th>
                                                     <td>Rp <?php echo rupiah($detail->pinjaman) ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Mu'nah</th>
+                                                    <th>Nilai Pembiayaan</th>
                                                     <td>Rp <?php echo rupiah($detail->munah) ?></td>
                                                 </tr>
                                                 
-                                                <tr>
-                                                    <th>Angsuran Pokok</th>
-                                                    <td>Rp <?php echo rupiah($detail->angsuranPokok) ?></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Angsuran/bulan</th>
-                                                    <td>Rp <?php echo rupiah($detail->angsuran) ?></td>
-                                                </tr>
                                                 <tr>
                                                     <th>Jenis Kendaraan</th>
                                                     <td><?php echo $detail->jenis; ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Biaya Admin</th>
-                                                    <td>Rp <?php echo rupiah($detail->biayaAdmin) ?></td>
+                                                    <td>Jenis Pekerjaan</td>
+                                                    <td>mikro/makro</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Kafalah</th>
+                                                    <th>Angsuran pokok</th>
+                                                    <td>Rp <?php echo rupiah($detail->angsuran) ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mu'nah</td>
+                                                    <td>Rp 100.000,-</td>
+                                                </tr>
+                                                <tr>
+                                                <th>Angsuran Real</th>
+                                                    <td>Rp <?php echo rupiah($detail->angsuran) ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Administrasi - Kafalah - Tenor</th>
                                                     <td>Rp<?php  echo rupiah($detail->kafalah) ?> (<?php echo $detail->rate_kafalah ?>%)</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Akad</th>
-                                                    <td><?php echo $detail->tenor ?> Bulan</td>
                                                 </tr>
                                                 
 
                                             </tbody>
                                     </table>
-                                    <h6><font color="red">* Belum termasuk biaya notaris</font></h6>
+                                    <h6><font color="red" style="font-style:italic">* Belum termasuk biaya notaris</font></h6>
                                     
                                     
 								</blockquote>
