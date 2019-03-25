@@ -77,6 +77,14 @@
                         </a>
                     </div>
                 </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="single-category text-center mb-4">
+                        <a href="<?php echo site_url('rahn') ?>">
+                            <img src="<?php echo base_url('') ?>assets/images/icon4.png" style="width:50px;height:auto;"alt="category">
+                            <h3>Rahn Tasjili</h3>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 <!--    </section>-->
